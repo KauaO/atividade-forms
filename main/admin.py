@@ -4,13 +4,12 @@ from main.forms import *
 # Register your models here.
 
 class AlunoAdmin(admin.ModelAdmin):
-    list_display = { 'nome', 'email', 'sexo', 'curso', 'minicurso'}
-    search_fields = ('nome')
-    list_filter = {'curso'}
+    list_display = ( 'nome', 'email', 'sexo')
+    search_fields = (['nome'])
+    list_filter = (['curso'])
 
 
    
 
-
-
-admin.site.register(AlunoAdmin, Aluno)
+admin.site.register(MiniCursos)
+admin.site.register(Aluno, AlunoAdmin)
