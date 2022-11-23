@@ -4,7 +4,7 @@ from main.forms import *
 # Register your models here.
 
 class AlunoAdmin(admin.ModelAdmin):
-    list_display = ( 'nome', 'email', 'sexo')
+    list_display = ( 'nome', 'email', 'sexo', 'curso',)
     search_fields = (['nome'])
     list_filter = (['curso'])
 
